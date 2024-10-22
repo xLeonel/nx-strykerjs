@@ -1,0 +1,30 @@
+{
+    "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+    "packageManager": "npm",
+    "testRunner": "jest",
+    "jest": {
+        "projectType": "custom",
+        "configFile": "./apps/demo/jest.config.ts",
+        "config": {
+            "testEnvironment": "jsdom"
+        },
+        "enableFindRelatedTests": true
+    },
+    "coverageAnalysis": "perTest",
+    "mutate": [
+        "./apps/demo/src/**/*.ts",
+        "!./apps/demo/src/**/*.spec.ts",
+        "!./apps/demo/src/**/*.routes.ts",
+        "!./apps/demo/src/**/main.ts"
+    ],
+    "thresholds": {
+        "high": 100,
+        "low": 70,
+        "break": 100
+    },
+    "reporters": [
+        "html",
+        "clear-text",
+        "progress"
+    ]
+}

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage --no-cache"
+    "test": "jest --coverage --no-cache",
+    "test:mutate": "npm run test && stryker run"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@nrwl/web": "15.9.7",
     "@nrwl/workspace": "15.9.7",
     "@schematics/angular": "~15.2.0",
+    "@stryker-mutator/jest-runner": "^8.6.0",
     "@types/jest": "^29.4.0",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",

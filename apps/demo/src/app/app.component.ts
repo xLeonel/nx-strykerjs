@@ -6,5 +6,15 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "demo";
+  podeTirarCarta(idade: number) {
+    if (idade >= 18) {
+      return true;
+    }
+
+    return false;
+  }
+
+  isAdulto(idade: number) {
+    return idade >= 18;
+  }
 }

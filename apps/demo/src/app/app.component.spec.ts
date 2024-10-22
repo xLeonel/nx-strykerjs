@@ -18,9 +18,11 @@ describe("AppComponent", () => {
     expect(compiled.querySelector("h1")?.textContent).toContain("Welcome demo");
   });
 
-  it(`should have as title 'demo'`, () => {
+  it('pode tirar carta', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual("demo");
+
+    expect(app.podeTirarCarta(15)).toBeFalsy();
+    expect(app.podeTirarCarta(18)).toBeTruthy();
   });
 });
